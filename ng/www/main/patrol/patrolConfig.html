@@ -1,0 +1,48 @@
+
+<ion-view view-title="配置列表">
+<!-- ng-repeat 嵌套方法试用 track by 是关键-->
+  <ion-content class="scroll-content padding" ng-controller="PatrolCtrlConfig" data-ng-init="load()" > 
+    <div class="list" ng-model="access_token">
+      <a class="item item-thumbnail-left item-button-right " href="#" ng-repeat="item in items " ng-model="url_paths">
+        <img src= {{itemval}} ng-repeat="(itemkey,itemval) in item.imgpath track by $id(itemkey)">
+        
+        <h2 >{{item.type}}</h2>
+        <h3 >{{item.id}}</h3>
+        <p>{{item.content}}</p>
+        <button class="button button-positive playButton">
+          详情
+        </button>
+      </a>
+    </div>
+
+   <!-- <ion-list>
+    <a class="item item-thumbnail-left item-button-right"  ng-repeat="item in items" >
+      <img  ng-src={{item.icon}} alt="游戏Icon">
+      <h2 >
+        <span  ng-bind="item.name"></span>
+        <em>
+          <img ng-if="item.mark !==0 " ng-src="http://www.lbwan.com/img/newHome/{{item.mark}}.png" alt="萝卜玩"/>
+        </em>
+      </h2>
+      <p style="height:1.5rem;margin: 0.6rem 0 .3rem;">
+        <img style="width:1rem;height:1rem" ng-src="{{getStarSrc(1,item.star)}}" alt="" >
+        <img style="width:1rem;height:1rem" ng-src="{{getStarSrc(2,item.star)}}" alt="">
+        <img style="width:1rem;height:1rem" ng-src="{{getStarSrc(3,item.star)}}" alt="">
+        <img style="width:1rem;height:1rem" ng-src="{{getStarSrc(4,item.star)}}" alt="">
+        <img style="width:1rem;height:1rem" ng-src="{{getStarSrc(5,item.star)}}" alt="">
+      </p>
+      <p style="color: #818181 !important;">
+        <b>在线：</b>
+        <strong ng-bind="item.onlineNum" style="color: #F34343"></strong>
+        <b>人气：</b>
+        <strong ng-bind="item.fakePlayNum"></strong>
+      </p>
+      <button class="button button-positive playButton">
+      PLAY
+      </button>
+    </a>
+  </ion-list> -->
+
+  </ion-content>
+</ion-view>
+
