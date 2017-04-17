@@ -10,3 +10,5 @@
 * 黑盒抽象(Black-box abstraction)
 * 约定接口(Conventional interfaces)
 * 元语言抽象(Metaling abstraction)
+
+[Lec1a：Lisp概览](https://www.youtube.com/watch?v=iG6eVomFrhE&list=PLkEwH_Z2WOlppy8oUfrGwFVlOuKyo3RO_)
